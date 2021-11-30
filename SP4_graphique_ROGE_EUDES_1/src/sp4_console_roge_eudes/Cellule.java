@@ -73,7 +73,6 @@ public class Cellule {
     
     public boolean recupererDesintegrateur() {
         if (desintegrateur == true) {
-            desintegrateur = true ;
             return true ;}
         else return false ;
     }

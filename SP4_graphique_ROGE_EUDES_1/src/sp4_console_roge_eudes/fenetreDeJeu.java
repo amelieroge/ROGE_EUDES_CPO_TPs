@@ -225,8 +225,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
         panneau_info_joueurs.setVisible(true);
         panneau_info_partie.setVisible(true);
-        /*initialiserPartie();
-        panneau_grille.repaint();*/
+        initialiserPartie();
+        panneau_grille.repaint();
         btn_start.setEnabled(false);
     }//GEN-LAST:event_btn_startActionPerformed
 
@@ -277,7 +277,6 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     
     public void initialiserPartie() {
         
-        grilleJeu = new Grille();
         
         // création des joueurs 
         String nomJoueur1 = nom_joueur1.getText();
@@ -319,6 +318,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             m = r.nextInt(7);
             if (grilleJeu.CelluleJeu[n][m].presenceTrouNoir() == false) {
                 grilleJeu.placerTrouNoir(n, m);
+                System.out.println(n + " " + m);
                 if (j < 2) {                                // placer les deux désintégrateurs sur les trous noirs
                     grilleJeu.placerDesintegrateur(n, m);
                     j++;

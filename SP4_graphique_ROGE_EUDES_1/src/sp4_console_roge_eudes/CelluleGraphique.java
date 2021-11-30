@@ -22,15 +22,18 @@ import javax.swing.JButton;
     
     public CelluleGraphique (Cellule uneCellule) {
         celluleAssociee = uneCellule ;
+        
     }
     
     @Override
     public void paintComponent (Graphics G){
         super.paintComponent(G);
-        if (celluleAssociee.presenceTrouNoir()){
+        
+        if (celluleAssociee.presenceTrouNoir()==true){
+            System.out.println("zerefghj");
             setIcon(img_trouNoir);
         }
-        if (celluleAssociee.presenceDesintegrateur()){
+        else if (celluleAssociee.presenceDesintegrateur()){
             setIcon(img_desintegrateur);
         }
         else {
